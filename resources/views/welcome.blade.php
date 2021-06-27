@@ -43,7 +43,7 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Kora</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand " href="index.html"><img src="asset2/images/logo3.jpeg" height="100px"  alt="alternative"></a> 
+            <a class="navbar-brand " href=""><img src="asset2/images/logo3.jpeg" height="100px"  alt="alternative"></a> 
 
             <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
                 <span class="navbar-toggler-icon"></span>

@@ -8,6 +8,8 @@
 $user=Auth::user()->comprofile()->get()->first();    
 @endphp
 {{-- {{$user}} --}}
+<div class="container">
+    <br>
 <div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -62,12 +64,10 @@ $user=Auth::user()->comprofile()->get()->first();
 
                     </div>
                 
-                 <a href="/home">
-                <i class="btn btn-info btn-fill "><p>Back</p></i>
-                
-            </a>
+
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

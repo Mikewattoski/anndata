@@ -130,7 +130,11 @@
         </nav>
   @yield('content')
         
-        <footer class="footer" >
+        <footer class="footer" style=" position: fixed;
+        padding: 10px 10px 0px 10px;
+        bottom: 10px;
+    " >
+       
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>

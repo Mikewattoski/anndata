@@ -25,10 +25,10 @@ class HomeController extends Controller
     public function index()
     {
         if(Auth::user()->id==2)
-       { $use=User::all()->where('role_id',2);
+       { $use=User::all()->where('role_id',2)->where('profile_complete', 1);
         return view('admin2',compact('use'));
        } else
-{$use=User::all()->where('role_id',1);
+{$use=User::all()->where('role_id',1)->where('profile_complete', 1);
         return view('admin1',compact('use'));
 }    }
 }

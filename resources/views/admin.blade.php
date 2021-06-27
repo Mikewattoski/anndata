@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-    <title>Conotizer Admin</title>
+    <title>AnnDaata Admin</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
@@ -21,29 +21,35 @@
     {{Html::style('assets/css/themify-icons.css')}}
     
 </head>
+<style>
+    p{
+    font-size: 15px !important;
+    }
+</style>
+
 <body>
 
-<div class="wrapper">
+<div class="wrapper" >
     <div class="sidebar" data-background-color="white" data-active-color="#FF4A52" >
 
-        <div class="sidebar-wrapper" style="background-color: #040E27 !important;"  >
+        <div class="sidebar-wrapper" style="background-color:#ff6c02 !important;"  >
             <div class="logo"  >
-                <a href="/" class="simple-text">
+                <a href="/" class="simple-text" style="color: #FFF">
                     @if(Auth::user()->role_id==2)Company Dashboard @else Farmer Dashboard @endif
                 </a>
             </div>
 
-            <ul class="nav">
+            <ul class="nav" >
                 <li>
                     <a href="/home">
-                        <i class="ti-panel"></i>
-                       <p>Dashboard</p>
+                        <i class="ti-panel" style="color: #FFF"></i>
+                       <p style="color: #FFF">Dashboard</p>
                     </a>
                 </li>
                 <li>
                     <a @if(Auth::user()->role_id==2)href="/company/profile" @else href="/farmer/profile" @endif>
-                        <i class="ti-archive"></i>
-                        <p>Profile</p>
+                        <i class="ti-archive" style="color: #FFF"></i>
+                        <p style="color: #FFF" >Profile</p>
                     </a>
                 </li>
 @if(Auth::user()->profile_complete==1)
@@ -51,8 +57,8 @@
 @if(Auth::user()->role_id==1)
 <li>
                     <a  @if(Auth::user()->role_id==2)href="/company/order" @else href="/farmer/stock" @endif>
-                        <i class="ti-archive"></i>
-                        <p>@if(Auth::user()->role_id==2)Add Order @else Add Stock @endif</p>
+                        <i class="ti-archive" style="color: #FFF"></i>
+                        <p style="color: #FFF">@if(Auth::user()->role_id==2)Add Order @else Add Stock @endif</p>
                     </a>
                 </li>
                 @endif{{-- <li>
@@ -69,8 +75,8 @@
                  --}}
                 <li>
                     <a  @if(Auth::user()->role_id==2)href="/company/order" @else href="/farmer/order" @endif>
-                        <i class="ti-calendar"></i>
-                        <p>Orders</p>
+                        <i class="ti-calendar" style="color: #FFF"></i>
+                        <p style="color: #FFF">Orders</p>
                     </a>
                 </li>
                 
@@ -85,7 +91,7 @@
         </div>
     </div>
 <div class="main-panel">
-        <nav class="navbar navbar-default" style="background-color: #FF4A52 !important;"  >
+        <nav class="navbar navbar-default" style="background-color: #1E266D!important;"  >
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle">
@@ -124,7 +130,7 @@
         </nav>
   @yield('content')
         
-        <footer class="footer">
+        <footer class="footer" >
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>
@@ -149,7 +155,7 @@
                 <div class="copyright pull-right">
                     &copy;
                     <script>document.write(new Date().getFullYear())</script>
-                    , made with <i class="fa fa-heart heart"></i> by <a href="">Runntimeterror</a>
+                    , made with <i class="fa fa-heart heart"></i> by <a href="">AnnDaata</a>
                 </div>
             </div>
         </footer>

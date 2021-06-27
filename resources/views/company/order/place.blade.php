@@ -12,7 +12,7 @@
             <div class="col-lg-10 col-md-10">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">Create Profile</h4>
+                        <h4 class="title">Create order</h4>
                     </div>
                       @if($errors->any())
                             <ul>

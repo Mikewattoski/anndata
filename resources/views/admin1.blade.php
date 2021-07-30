@@ -14,9 +14,10 @@
 <br><br>
 <br>
 <br>
-<h1>Please complete your profile for further procedure</h1>
-
-
+<div class="container">
+<center><h1 class="alert alert-success" role="alert">Please complete your profile!</h1>
+</center>
+</div>
 <br><br>
 <br>
 
@@ -33,6 +34,8 @@
 
 
 @else
+<div class="container">
+    <br>
 <div class="row">
 
     <div class="col-md-12">
@@ -94,6 +97,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endif
 @endsection

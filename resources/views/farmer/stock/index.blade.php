@@ -4,6 +4,7 @@
 @endsection
 
 @section('content')
+<div class="container"><br>
    <div class="col-md-12">
 
                         <div class="card">
@@ -16,9 +17,9 @@
                                     {{session()->get('msg')}}
                                     </div>
                                     @endif
-                                    <a href="stock/create" class="btn btn-info btn-md">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                      </a>
+                                   <center> <a href="stock/create" class="btn btn-primary">
+                                        <span class="">+ Add Stocks</span>
+                                      </a></center>
                             <div class="content table-responsive table-full-width">
                                
                                 <table class="table table-striped">
@@ -55,5 +56,6 @@
                             </div>
                         </div>
                     </div>
+                </div>
 @endsection
 

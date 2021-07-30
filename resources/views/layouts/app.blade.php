@@ -77,7 +77,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="background: linear-gradient(45deg,#DDE6FC,#F5F3FE)">
             @yield('content')
         </main>
     </div>

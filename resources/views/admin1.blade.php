@@ -4,7 +4,11 @@
 @endsection
 
 @section('content')
-
+@if (session('message'))
+<div class="alert alert-success" role="alert">
+    {{ session('message') }}
+</div>
+@endif
 @if(Auth::user()->profile_complete==0)
 <br>
 <br>
@@ -66,7 +70,7 @@
       
 @foreach ($use as $item)
 @foreach ($item->userstock()->get() as $it)
-    
+   
               <tr>
                         <td>{{$it->item()->get()->first()->name}}</td>
                         <td>{{$it->farmer()->get()->first()->name}}</td>

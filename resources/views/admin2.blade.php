@@ -4,6 +4,11 @@
 @endsection
 
 @section('content')
+@if (session('message'))
+<div class="alert alert-success" role="alert">
+    {{ session('message') }}
+</div>
+@endif
 @if(Auth::user()->profile_complete==0)
 <br>
 <br>
@@ -74,6 +79,8 @@
                         
                         <td>{{$item->email}}</td>
                         <td>{{$item->state()->get()->first()->name}}</td>
+                        <td><a href="/mail/{{$item->comprofile()->get()->first()->Phone_no}}">Place Order</a>
+                        </td>
                         {{-- <td>{{$it->available_till}}</td> --}}
                         {{-- <td>
                            
@@ -85,7 +92,6 @@
 
                             {{Form::close()}}
                         </td> --}}
-    
                         @endforeach
                                             </tr>
                     

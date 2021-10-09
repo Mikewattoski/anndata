@@ -19,7 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes(['reset' => false, 'verify' => false,'register'=>false]);
-
+Route::get('/mail/{id}', [App\Http\Controllers\mailcontroller::class, 'index']);
+Route::post('/verify', [App\Http\Controllers\mailcontroller::class, 'verify'])->name('verify');
+Route::get('/verify', function () {
+    return view('auth.verify');
+})->name('verify');
+Route::post('/sendmail', [App\Http\Controllers\mailcontroller::class, 'mail']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/registration', function(){
     $state=state::all();
